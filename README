@@ -1,6 +1,6 @@
 #####################################################################
 #                                                                   #
-#	APPLICATION OF THE Hukanzen, BY THE Hukanzen, FOR THE Hukanzen. #
+#   APPLICATION OF THE Hukanzen, BY THE Hukanzen, FOR THE Hukanzen. #
 #                                                                   #
 #####################################################################
 
@@ -12,9 +12,9 @@
 
 #=== START user.php ===#
 	<?php
-		$cK	='xxx Consumer Key        xxx';
-		$cS	='xxx Consumer Secret     xxx';
-		$aT	='xxx Access Token        xxx';
+		$cK ='xxx Consumer Key        xxx';
+		$cS ='xxx Consumer Secret     xxx';
+		$aT ='xxx Access Token        xxx';
 		$aTS='xxx Access Token Secret xxx';
 		$connect=new TwistOAuth($cK,$cS,$aT,$aTS);
 	?>
