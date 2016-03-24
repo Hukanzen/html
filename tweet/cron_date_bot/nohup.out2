@@ -1,0 +1,16 @@
+PHP Warning:  file_get_contents(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/html/tweet/myfunc/func.php on line 18
+
+Warning: file_get_contents(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/html/tweet/myfunc/func.php on line 18
+PHP Warning:  file_get_contents(http://calendar-service.net/cal?start_year=2016&start_mon=01&end_year=2016&end_mon=01&year_style=normal&month_style=numeric&wday_style=ja&format=csv&holiday_only=1&zero_padding=1): failed to open stream: php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/html/tweet/myfunc/func.php on line 18
+
+Warning: file_get_contents(http://calendar-service.net/cal?start_year=2016&start_mon=01&end_year=2016&end_mon=01&year_style=normal&month_style=numeric&wday_style=ja&format=csv&holiday_only=1&zero_padding=1): failed to open stream: php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/html/tweet/myfunc/func.php on line 18
+0 name lookup timed outPHP Warning:  file_get_contents(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/html/tweet/myfunc/func.php on line 18
+
+Warning: file_get_contents(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/html/tweet/myfunc/func.php on line 18
+PHP Warning:  file_get_contents(http://calendar-service.net/cal?start_year=2016&start_mon=01&end_year=2016&end_mon=01&year_style=normal&month_style=numeric&wday_style=ja&format=csv&holiday_only=1&zero_padding=1): failed to open stream: php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/html/tweet/myfunc/func.php on line 18
+
+Warning: file_get_contents(http://calendar-service.net/cal?start_year=2016&start_mon=01&end_year=2016&end_mon=01&year_style=normal&month_style=numeric&wday_style=ja&format=csv&holiday_only=1&zero_padding=1): failed to open stream: php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/html/tweet/myfunc/func.php on line 18
+PHP Warning:  mysqli_connect(): (HY000/2002): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /var/www/html/tweet/myfunc/connect.php on line 3
+
+Warning: mysqli_connect(): (HY000/2002): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /var/www/html/tweet/myfunc/connect.php on line 3
+接続失敗です。

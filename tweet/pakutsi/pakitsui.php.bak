@@ -1,0 +1,40 @@
+<?php 
+//	require dirname(__FILE__).'/../TwistOAuth.phar'   ;
+//	require dirname(__FILE__).'/../main/user.php'     ;
+//	require dirname(__FILE__).'/../main/try_catch.php';
+//	require dirname(__FILE__).'/../myfunc/func.php'   ;
+//	
+//	$search="@gigigii1";
+//	$count=10;
+//
+//	pakufav($search,$count,$cK,$cS,$aT,$aTS);
+
+	function pakufav($search,$count,$cK,$cS,$aT,$aTS){
+		if($count>200) $count=200;
+
+		$connection	= new TwistOAuth($cK,$cS,$aT,$aTS);
+		// キーワードによるツイート検索
+		$tweets_params=array("q"=>$search,'count'=> $count);
+		$tweets=$connection->get('search/tweets', $tweets_params);
+		$me_screen_name=$connection->get('account/verify_credentials')->screen_name;
+		//echo $tweets;
+		$i=0;
+		if($tweets){
+			//echo $tweets->statuses->text;
+			foreach($tweets->statuses as $value){
+				if(($value->user->screen_name) != $me_screen_name){
+					/*=== no my tweet ===*/
+					$now=array("sec" => date("s"));
+					$tweet_id=$value->id_str;
+					if(($value->favorited)=="false"){
+						$status = $connection->post('favorites/create', array('id' => $tweet_id));
+					}
+					try_catch($cK,$cS,$aT,$aTS,$value->text);
+					echo $i."/".$count." fi\n";
+					sleep(7);
+					$i++;
+				}
+			}
+		}
+	}
+?>

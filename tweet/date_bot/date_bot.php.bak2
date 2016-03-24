@@ -1,0 +1,79 @@
+<?php
+	
+	require dirname(__FILE__).'/../TwistOAuth.phar'   ;
+	require dirname(__FILE__).'/../main/user.php'     ;
+	require dirname(__FILE__).'/../main/try_catch.php';
+	require dirname(__FILE__).'/../myfunc/func.php'   ;
+
+//	require '../TwistOAuth.phar';
+//	require '../main/user.php';
+//	require '../main/try_catch.php';
+//	require '../myfunc/func.php';
+
+	//date_default_timezone_set('UST');
+	//$j_youbi=array(
+	//		"1" => "月",
+	//		"2" => "火",
+	//		"3" => "水",
+	//		"4" => "木",
+	//		"5" => "金",
+	//		"6" => "土",
+	//		"0" => "日"
+	//);
+
+
+	//function cov_youbi($e_youbi,$j_youbi)
+	//{
+	//	for($i=0;$i<7;$i++){
+	//		if($e_youbi == $i) return $j_youbi[$i];
+	//	}
+	//}
+
+	//$tweet_flag=0;
+	while(1){
+		$now=array(
+			"year"  => date("Y"),
+			"month" => date("m"),
+			"day"   => date("d"),
+			"hour"  => date("H"),
+			"min"   => date("i"),
+			"sec"   => date("s"),
+			"youbi" => date("w")
+		);
+	
+		if($now["min"] >="55" || $now["min"] == "00"){
+			//if($now["min"] =="00" && $tweet_flag==0){
+			if($now["min"] =="00" && $now["sec"] =="00"){
+				//$to_tweet_data="@AkihisaYoshii4";
+
+				$holi_tweet_data=holiday($now["year"],$now["month"],$now["day"]);
+
+				$add_tweet_data="#自作bot試験中";
+	
+	
+				//$now["youbi"]=cov_youbi($now["youbi"],$j_youbi)."曜日";
+				$now["youbi"]=cov_youbi($now["youbi"])."曜日";
+	
+				$tweet_data=
+						//$to_tweet_data." ".
+						'今は' ." ".
+						$now["year"]   ."/".
+						$now["month"]  ."/".
+						$now["day"]    .' '.
+						$now["hour"]   .':'.
+						$now["min"]    .':'.
+						$now["sec"]    .' '.
+						$now["youbi"]  .' '.
+						$holi_tweet_data.' '.'です.'.' '.
+						$add_tweet_data;
+						
+		 		try_catch($cK,$cS,$aT,$aTS,$tweet_data);
+				//$tweet_flag=1;
+			}
+		}else{
+			sleep((5-1)*(60));
+			//$tweet_flag=0;
+		}
+	}
+?>
+		

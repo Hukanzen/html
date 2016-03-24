@@ -1,0 +1,21 @@
+#####################################################################
+#                                                                   #
+#	APPLICATION OF THE Hukanzen, BY THE Hukanzen, FOR THE Hukanzen. #
+#                                                                   #
+#####################################################################
+
+	Twitter application made Hukanzen.
+	I didn't upload user.php.
+	Please make "user.php" by you.
+
+	I write below of "user.php".
+
+#=== START user.php ===#
+	<?php
+		$cK	='xxx Consumer Key        xxx';
+		$cS	='xxx Consumer Secret     xxx';
+		$aT	='xxx Access Token        xxx';
+		$aTS='xxx Access Token Secret xxx';
+		$connect=new TwistOAuth($cK,$cS,$aT,$aTS);
+	?>
+#=== END user.php ===#
