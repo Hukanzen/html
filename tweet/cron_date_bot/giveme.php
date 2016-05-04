@@ -5,6 +5,6 @@
 	
 	$now=date("H");
 	$tweet_data="@Mecha_ZORARU giveme $now";
-	echo $tweet_data;
+	#echo $tweet_data;
 	try_catch($cK,$cS,$aT,$aTS,$tweet_data);
 ?>

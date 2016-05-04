@@ -1,0 +1,21 @@
+#
+#
+# This applicatin is named "IKKAKU_OFF Best Tweet".
+#
+#
+
+	this application is tweeting "best tweet".
+
+What is best tweet ?
+	the best best tweet is tweet what the most fav of the day before.
+	this is run every 0:00.
+
+What made is this application ?
+	this is made of "PHP".
+
+How is role made variable ?.
+	if initials("kashiramoji" in Japanese) is "O",this variable is assigned Object.
+	if initials is "a",this is maybe array.
+
+
+非公式API、ヴァージョン期限切れじゃねえか糞

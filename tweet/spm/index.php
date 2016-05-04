@@ -9,10 +9,10 @@
 		<p>max?</p>
 		<input type="text" name="maxN" value=""> 
 		<p>what?</p>
-		<input type="text" name="text" value="" style="width:1000px;"> 
+		<input type="text" name="text" value="" style="width:80%;"> 
 		<input type="submit" name="bin" value="tweet">
 	</form>
 
-	<a href="./../">top</a>
+	<a href="./../">return</a>
 </body>
 </html>
