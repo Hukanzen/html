@@ -86,6 +86,8 @@ function create_tweet($type){
 			output_book_data()." ".$now["hour"]."h".$now["min"]."m".$now["sec"]."s";
 	}else if($type==3){
 		return output_birthday();
+	}else if($type==4){
+		return top_data();
 	}
 }
 
@@ -175,6 +177,11 @@ function output_birthday(){
 	}else{
 		return 	"今日は".$bir_jname."の誕生日です．\n";
 	}
+}
+
+function top_data(){
+	system("top -b -n 1 > top_result.log");
+	system("perl top_cut.pl");
 }
 
 ?>
